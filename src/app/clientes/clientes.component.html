@@ -1,0 +1,114 @@
+<div class="">
+  <div class="">
+    {{titulo}}
+    <br><br><br>
+    Buscar
+    <input class="telefono" type="text" name="" value="" placeholder="buscar por ruc/dni">
+  </div>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>NOMBRE</th>
+        <th>DOCUMENTO</th>
+        <th>NUM. DOC</th>
+        <th>DIRECCION</th>
+        <th>TELEFONO</th>
+        <th>EMAIL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+
+        <td>{{cliente.nombre}}</td>
+        <td>{{cliente.documento}}</td>
+        <td>{{cliente.numero_documento}}</td>
+        <td>{{cliente.direccion}}</td>
+        <td>{{cliente.telefono}}</td>
+        <td>{{cliente.email}}</td>
+    <!--  
+      <td>{{cliente.nombre}}</td>
+      <td>{{cliente.documento}}</td>
+      <td>{{cliente.numero_documento}}</td>
+      <td>{{cliente.direccion}}</td>
+      <td>{{cliente.telefono}}</td>
+      <td>{{cliente.email}}</td>
+    -->
+        
+
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-2">
+
+      </div>
+      <div class="col-3">
+        Telefono<input type="text" placeholder="Nuevo numero" class="telefono">
+      </div>
+
+      <div class="col-3">
+        Email <input type="text" placeholder="Nuevo-email" class="telefono">
+      </div>
+
+      <div class="col-4">
+        <button class="btn btn-primary mr-1">Guardar</button>
+        <button class="btn btn-primary mr-1">Editar</button>
+        <button type="button" class="btn btn-success mr-1" data-toggle="modal" data-target="#exampleModal">
+          Añadir
+        </button>
+        <a class="btn btn-primary mr-1" href="#" >Cancelar</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Registrar nuevo cliente</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl">
+
+                Tratamiento <input type="text">
+                Nombre <input type="text">
+                Tipo de cliente <input type="text">
+                Documento <input type="text">
+                Numero <input type="text">
+                Telefono <input type="text">
+              </div>
+
+              <div class="col-sm">
+                Departamento <input type="text">
+                Provincia <input type="text">
+                Distrito <input type="text">
+                Direccion <input type="text">
+                Email <input type="text">
+                <hr>
+                <button class="btn btn-dark ">Guardar</button>
+                <button class="btn btn-danger">Cancelar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

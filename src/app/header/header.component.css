@@ -1,0 +1,22 @@
+.navbar-toggler
+{
+  border: 1px solid red;
+}
+.navbar-nav mr-auto
+{
+  border: 1px solid red;
+}
+
+.collapse navbar-collapse
+{
+  border: 1px solid red;
+}
+
+
+.clase{
+  color:white;
+}
+
+.nav-link dropdown-toggle{
+  color:white;
+}
